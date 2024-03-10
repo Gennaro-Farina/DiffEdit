@@ -8,6 +8,7 @@ readme = "README.md"
 packages = [
     { include = "diff_edit", from = "src" },
 ]
+license = "Apache-2.0"
 
 [project.scripts] # creates command-line scripts that call functions within your package.
 diff_edit = "diff_edit.scripts.image_edit:main"
