@@ -1,5 +1,6 @@
 [tool.poetry]
 name = "DiffEdit"
+# version_pattern = "MAJOR.MINOR.PATCH"
 version = "0.0.1"
 description = "An implementation of the DiffEdit algorithm for prompt-based mask creation and inpating. For more information, see the Readme file."
 authors = ["Gennaro Farina"]
@@ -7,6 +8,9 @@ readme = "README.md"
 packages = [
     { include = "diff_edit", from = "src" },
 ]
+
+[project.scripts] # creates command-line scripts that call functions within your package.
+diff_edit = "diff_edit.scripts.image_edit:main"
 
 [tool.poetry.dependencies]
 python="^3.10"
@@ -36,6 +40,7 @@ pytest-cov = { version = "4.0.0", optional = true }
 pytest-sugar = { version = "0.9.7", optional = true }
 # parallel test execution
 pytest-xdist = { version = "3.2.1", optional = true }
+setuptools = "^69.1.1"
 
 
 [tool.poetry.extras]
@@ -108,7 +113,6 @@ max-complexity = 18
 branch = true
 dynamic_context = "test_function"
 source = ["src/diff_edit"]
-# omit = ["src/mlx_llm/__init__.py", "src/mlx_llm/visualization/*.py"]
 
 [tool.coverage.report]
 exclude_lines = [
@@ -134,8 +138,8 @@ line-length = 120
 include = '\.pyi?$|\.ipynb$'
 exclude = '''
 /(
-    \.eggs         # exclude a few common directories in the
-  | \.git          # root of the project
+    \.eggs
+  | \.git
   | \.hg
   | \.mypy_cache
   | \.nox
@@ -157,7 +161,6 @@ exclude = '''
   | bin
   | lib
   | \.cicd
-  | src/mlx_llm/\.resources
 )/
 '''
 
