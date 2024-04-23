@@ -25,9 +25,10 @@ import os
 from fastdownload import FastDownload
 from diffusers import LMSDiscreteScheduler
 
-from diff_edit.model.model import DiffEdit
+from diff_edit.model.model_composer import ModelComposer
 
 os.environ['CURL_CA_BUNDLE'] = ''
+
 
 def parse_args():
     # Create the parser
@@ -189,14 +190,13 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Unknown scheduler {args.scheduler}")
 
-    diff_edit = DiffEdit()
-    diff_edit.compose_model(args.vae_model,
-                            args.tokenizer,
-                            args.text_encoder,
-                            args.unet,
-                            args.inpainting,
-                            scheduler,
-                            torch_dev=args.device)
+    diff_edit = ModelComposer(args.vae_model,
+                              args.tokenizer,
+                              args.text_encoder,
+                              args.unet,
+                              args.inpainting,
+                              scheduler,
+                              torch_dev=args.device).compose()
 
     # Validate the arguments
     assert args.remove_prompt and args.add_prompt, "Both remove and add prompts must be provided"
@@ -223,11 +223,10 @@ if __name__ == "__main__":
     else:
         raise ValueError(f"Either image or image_link must be provided")
 
-
     print(f"> Editing image {im_path}")
     if args.remove_prompt:
         print(f"> Removing prompt {args.remove_prompt}")
-        out = diff_edit.demo_diffedit(im_path, args.remove_prompt, args.add_prompt, seed=42, n=args.num_samples)
+        out = diff_edit.demo_diffedit(im_path, args.remove_prompt, args.add_prompt, n=args.num_samples, seed=42)
         if len(out) > 1:
             print('Saving result to', args.save_path)
             out[1].save(os.path.join(os.path.dirname(args.save_path), 'mask.png'))
