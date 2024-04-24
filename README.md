@@ -1,5 +1,6 @@
 # DiffEdit
 ___
+[![Build](https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/python-package.yaml/badge.svg)](https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/python-package.yaml)
 
 An unofficial implementation of <a href="https://arxiv.org/abs/2210.11427"> DiffEdit</a> based on <a href="https://huggingface.co"> 🤗 Hugging Face </a>, <a href="https://github.com/johnrobinsn/diffusion_experiments/blob/main/DiffEdit.ipynb"> this repo</a> and PyTorch.
 This methodology leverage the diffusion process to automatically extract a mask from an image given a prompt. The mask is then used to inpaint the image with the new content.
