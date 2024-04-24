@@ -1,5 +1,6 @@
 # DiffEdit
 ___
+[![pypi wheel](https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/publish-wheel-pypi.yml/badge.svg)](https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/publish-wheel-pypi.yml)
 [![Python package](https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/python-package.yml/badge.svg?branch=main)](https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/python-package.yml)
 
 An unofficial implementation of <a href="https://arxiv.org/abs/2210.11427"> DiffEdit</a> based on <a href="https://huggingface.co"> 🤗 Hugging Face </a>, <a href="https://github.com/johnrobinsn/diffusion_experiments/blob/main/DiffEdit.ipynb"> this repo</a> and PyTorch.
