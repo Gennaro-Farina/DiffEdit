@@ -1587,7 +1587,7 @@ files = [
 name = "mlx"
 version = "0.0.10"
 description = "A framework for machine learning on Apple silicon."
-optional = false
+optional = true
 python-versions = ">=3.8"
 files = [
     {file = "mlx-0.0.10-cp310-cp310-macosx_13_0_arm64.whl", hash = "sha256:3a764227ae9b0bb1237fa3077c38cab9e5f29811c3e86d4ff8fd66eb5adb9892"},
