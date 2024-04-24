@@ -190,7 +190,7 @@ class DiffEdit:
         if not os.path.exists(im_path):
             raise ValueError(f"Image path {im_path} does not exist. Check the provided path")
 
-        im = Image.open(im_path).resize((IMG_RESIZE_DIM, IMG_RESIZE_DIM))
+        im = Image.open(im_path).resize((IMG_RESIZE_DIM, IMG_RESIZE_DIM)).copy()
 
         logging.info(f"Inpainting the image using the mask.")
         inpainted_image = self.inpainter.inpaint_mask(im, mask, p2, seed)
@@ -214,7 +214,7 @@ class DiffEdit:
         out = []
 
         # getting image latent to put them in the output
-        im = Image.open(im_path).resize((IMG_RESIZE_DIM, IMG_RESIZE_DIM))
+        im = Image.open(im_path).resize((IMG_RESIZE_DIM, IMG_RESIZE_DIM)).copy()
         out.append(im)
 
         logging.info(f"Obtaining the mask by running the diffusion process {n} times.")
