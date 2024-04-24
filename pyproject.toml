@@ -15,7 +15,6 @@ diff_edit = "diff_edit.scripts.image_edit:main"
 
 [tool.poetry.dependencies]
 python="^3.10"
-mlx = "0.0.10"
 torch = "2.0.1"
 numpy = "1.26.2"
 tqdm = "*"

@@ -1584,29 +1584,6 @@ files = [
 ]
 
 [[package]]
-name = "mlx"
-version = "0.0.10"
-description = "A framework for machine learning on Apple silicon."
-optional = true
-python-versions = ">=3.8"
-files = [
-    {file = "mlx-0.0.10-cp310-cp310-macosx_13_0_arm64.whl", hash = "sha256:3a764227ae9b0bb1237fa3077c38cab9e5f29811c3e86d4ff8fd66eb5adb9892"},
-    {file = "mlx-0.0.10-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:f46a56a6f4ce377460290b38e26814bfd5ee780e016354d8c13e7d9c34a1cba5"},
-    {file = "mlx-0.0.10-cp311-cp311-macosx_13_0_arm64.whl", hash = "sha256:05a813aabecbc5d65c0d6b1fb5a1004c57690aae5ebab0cdcfccbe216eec6062"},
-    {file = "mlx-0.0.10-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:d16b0bd6aa23563c4473aa44ed200fb64fc34387ec87881b35cf5e23723479a4"},
-    {file = "mlx-0.0.10-cp312-cp312-macosx_13_0_arm64.whl", hash = "sha256:d84e7f11e10befd28445a35b1f16fc2a8e191a0b3e23bb33b5e1db16ae7d4d9e"},
-    {file = "mlx-0.0.10-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:5ad4b44084a85e18abbe6a056fc21f513d4714424ded1ac3e253412835cca8c0"},
-    {file = "mlx-0.0.10-cp38-cp38-macosx_13_0_arm64.whl", hash = "sha256:c17e5f14cdcdc2f08532e0d56ffe5a6b5673ec34410e39f3f0d6338d30f3d916"},
-    {file = "mlx-0.0.10-cp38-cp38-macosx_14_0_arm64.whl", hash = "sha256:80ea8a728b3d08bf760c83dfa7a7e8cbeadb9105ace24823a5f396a85e0d384b"},
-    {file = "mlx-0.0.10-cp39-cp39-macosx_13_0_arm64.whl", hash = "sha256:93b554a4bc967eb8c4fb44419acd32734fe0d4787bccda1fdf6481eb4a4706d1"},
-    {file = "mlx-0.0.10-cp39-cp39-macosx_14_0_arm64.whl", hash = "sha256:e62724e59e544c3bbaee7d93fe990e7ee113707205a059bfb1287992d78a10ed"},
-]
-
-[package.extras]
-dev = ["pre-commit", "pybind11-stubgen"]
-testing = ["numpy", "torch"]
-
-[[package]]
 name = "more-itertools"
 version = "10.2.0"
 description = "More routines for operating on iterables, beyond itertools"
@@ -3823,4 +3800,4 @@ test = ["pytest", "pytest-cov", "pytest-sugar", "pytest-xdist"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "237a23a959fa6c3dba1c336b2ae864ebe32c00087fe2a58ebe72a32596476b49"
+content-hash = "842f411be54ac32a2e5f10196920c2dc4af5db1f1424101c541c8067645db184"
