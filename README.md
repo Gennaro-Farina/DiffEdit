@@ -17,21 +17,27 @@ To get a clearer overview of the process, you can take a look at the <a href="ht
 <body>
 <tr>
 <td>"lion" ⟶ "dog"</td>
-<td><img src="static/ai_gen_lion.jpeg" width="256" height="256"></td>
-<td><img src="static/ai_gen_lion_mask.png" width="256" height="256"></td>
-<td><img src="static/ai_gen_lion_result.png" width="256" height="256"></td>
+<td><img src="static/ai_gen_lion.jpeg" width="256" height="256" alt="An AI generated lion"></td>
+<td><img src="static/ai_gen_lion_mask.png" width="256" height="256" 
+         alt="The mask of the image region containing the 'lion'"></td>
+<td><img src="static/ai_gen_lion_result.png" width="256" height="256"
+         alt="The edited image with the 'dog' instead of the 'lion'"></td>
 </tr>
 <tr>
 <td>"house" ⟶ "3-floor hotel"</td>
-<td><img src="static/ai_gen_house.jpeg" width="256" height="256"></td>
-<td><img src="static/ai_gen_house_mask.png" width="256" height="256"></td>
-<td><img src="static/ai_gen_house_result.png" width="256" height="256"></td>
+<td><img src="static/ai_gen_house.jpeg" width="256" height="256" alt="An AI generated house"></td>
+<td><img src="static/ai_gen_house_mask.png" width="256" height="256" 
+         alt="The mask of the image region containing the 'house'"></td>
+<td><img src="static/ai_gen_house_result.png" width="256" height="256"
+         alt="The edited image with the '3-floor hotel' instead of the 'house'"></td>
 </tr>
 <tr>
 <td>"an F1 race" ⟶ "a motogp race"</td>
-<td><img src="static/ai_gen_f1.jpeg" width="256" height="256"></td>
-<td><img src="static/ai_gen_f1_mask.png" width="256" height="256"></td>
-<td><img src="static/ai_gen_f1_result.png" width="256" height="256"></td>
+<td><img src="static/ai_gen_f1.jpeg" width="256" height="256" alt="An AI generated image of an F1 competition"></td>
+<td><img src="static/ai_gen_f1_mask.png" width="256" height="256" 
+         alt="The mask of the image region containing the F1 cars"></td>
+<td><img src="static/ai_gen_f1_result.png" width="256" height="256"
+         alt="The edited image with the 'motogp' instead of the 'F1'"></td>
 </tr>
 </body>
 </table>
@@ -40,9 +46,52 @@ All the previous masks was generated with: `num-samples = 10`
 
 ## Installation
 
+You can install the package in different ways, depending on your needs.
+
+
+
+<details>
+  <summary> Optional step (recommended)</summary>
+  
+Create a virtual environment, to avoid conflicts with other packages. Here are some alternatives:
+
+- with `venv`:
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+- with `poetry`:
+```bash
+poetry shell
+```
+
+- with `conda`:
+```bash
+conda create -n diff-edit python=3.10
+conda activate diff-edit
+```
+
+</details>
+
+
+Install the package from PyPi:
+```bash
+pip install diff-edit
+```
+<details>
+    <summary> Alternative ways</summary>
+
+Install the package from source:
+```bash
+poetry install
+```
+
+Install the package in editable mode, suggested for further development:
 ```bash
 pip install -e .
 ```
+</details>
 
 ## Usage
 
