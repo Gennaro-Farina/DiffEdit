@@ -22,6 +22,7 @@ import argparse
 import torch
 import os
 
+from transformers.utils.hub import move_cache
 from fastdownload import FastDownload
 from diffusers import LMSDiscreteScheduler
 
@@ -29,7 +30,7 @@ from diff_edit.model.model_composer import ModelComposer
 
 os.environ['CURL_CA_BUNDLE'] = ''
 
-
+move_cache()
 def parse_args():
     # Create the parser
     parser = argparse.ArgumentParser(description="Diffusion Image Editing arguments")

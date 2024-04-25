@@ -5,9 +5,8 @@ name: pypi wheel
 
 on:
   workflow_run:
-    workflows: [build]
+    workflows: ["build and test"]
     types: [completed]
-
 jobs:
   on-success:
     runs-on: ubuntu-latest

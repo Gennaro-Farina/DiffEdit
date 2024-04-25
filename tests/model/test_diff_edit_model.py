@@ -1,9 +1,11 @@
 import pytest
 
 from diffusers import LMSDiscreteScheduler
+from transformers.utils.hub import move_cache
+
 from diff_edit.model.model_composer import ModelComposer
 
-
+move_cache()
 # all right reserved to the owner. Image from wikipedia
 @pytest.mark.parametrize("image_path, p, n, seed", [
     ("tests/images/wikipedia_440px-BlkStdSchnauzer2.jpg", ["dog", "cat"], 2, 42),
