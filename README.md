@@ -1,11 +1,11 @@
 # DiffEdit
-___
+
 <div>
          <p align="right">
                   <img src="https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/build-and-test.yml/badge.svg" alt="badge for the build and test phases" />
                   <img src="https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/publish-wheel-pypi.yml/badge.svg" alt="badge for the wheel publish phase" />
                   <a href="https://pypi.org/project/DiffEdit/">
-                           <img src="https://img.shields.io/pypi/wheel/DiffEdit?style=flat&logo=PyPI&logoColor=%23969DA5&labelColor=%23353B43&color=%2331C854" alt="badge for the link to the wheel" />
+                           <img src="https://img.shields.io/pypi/wheel/DiffEdit?style=flat&logo=PyPI&logoColor=%23969DA5&labelColor=%23353B43&color=%230073b7" alt="badge for the link to the wheel" />
                   </a>
          </p>
 </div>
@@ -16,6 +16,13 @@ This methodology leverage the diffusion process to automatically extract a mask 
 To get a clearer overview of the process, you can take a look at the <a href="https://github.com/Gennaro-Farina/diffusion-nbs/blob/master/DiffEdit.ipynb"> DiffEdit.ipynb</a> notebook.
 
 The wheel for this repo is avaivalable here: ![https://pypi.org/project/DiffEdit/](https://pypi.org/project/DiffEdit/)
+
+
+Index:
+- results: https://github.com/Gennaro-Farina/DiffEdit/edit/main/README.md#results
+- installation: https://github.com/Gennaro-Farina/DiffEdit/edit/main/README.md#installation
+- usage: https://github.com/Gennaro-Farina/DiffEdit/edit/main/README.md#usage
+
 
 ## Results
 
