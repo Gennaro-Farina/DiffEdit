@@ -176,9 +176,18 @@ def parse_args():
 
     return args
 
-
-if __name__ == "__main__":
+def diff_edit_main():
     args = parse_args()
+
+    # Validate the arguments
+    assert args.remove_prompt and args.add_prompt, "Both remove and add prompts must be provided"
+    assert args.image or args.image_link, "Either image or image_link must be provided"
+    assert not (args.image and args.image_link), "Either image or image_link must be provided, not both"
+    assert args.device in ["cpu", "cuda", "mps"], "Invalid device"
+    assert args.scheduler in ["LMSDiscreteScheduler"], "Invalid scheduler"
+    assert args.beta_schedule in ["scaled_linear"], "Invalid beta schedule"
+    assert args.scheduler_start < args.scheduler_end, "Invalid beta values"
+
 
     print(f"> Setting up the DiffEdit components:\n{args}")
 
@@ -198,15 +207,6 @@ if __name__ == "__main__":
                               args.inpainting,
                               scheduler,
                               torch_dev=args.device).compose()
-
-    # Validate the arguments
-    assert args.remove_prompt and args.add_prompt, "Both remove and add prompts must be provided"
-    assert args.image or args.image_link, "Either image or image_link must be provided"
-    assert not (args.image and args.image_link), "Either image or image_link must be provided, not both"
-    assert args.device in ["cpu", "cuda", "mps"], "Invalid device"
-    assert args.scheduler in ["LMSDiscreteScheduler"], "Invalid scheduler"
-    assert args.beta_schedule in ["scaled_linear"], "Invalid beta schedule"
-    assert args.scheduler_start < args.scheduler_end, "Invalid beta values"
 
     print(f"> Setting random seed {args.seed}")
     torch.manual_seed(args.seed)
@@ -233,3 +233,7 @@ if __name__ == "__main__":
             out[1].save(os.path.join(os.path.dirname(args.save_path), 'mask.png'))
             out[-1].save(args.save_path)  # inpainted image
         print(f"> Result saved to result.png")
+
+
+if __name__ == "__main__":
+    diff_edit_main()

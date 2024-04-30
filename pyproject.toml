@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "DiffEdit"
 # version_pattern = "MAJOR.MINOR.PATCH"
-version = "0.0.2rc9"
+version = "0.0.2rc10"
 description = "An implementation of the DiffEdit algorithm for prompt-based mask creation and inpating. For more information, see the Readme file."
 authors = ["Gennaro Farina"]
 readme = "README.md"
@@ -10,8 +10,8 @@ packages = [
 ]
 license = "Apache-2.0"
 
-[project.scripts] # creates command-line scripts that call functions within your package.
-diff_edit = "diff_edit.scripts.image_edit:main"
+[tool.poetry.scripts]
+diff_edit = "diff_edit.scripts.image_edit:diff_edit_main"
 
 [tool.poetry.dependencies]
 python="^3.10"

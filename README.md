@@ -116,8 +116,13 @@ An example of usage is the following (resulting in <a href="https://github.com/G
 python image_edit.py --remove-prompt "lion" --add-prompt "dog" --image-link "https://github.com/Gennaro-Farina/DiffEdit/blob/main/static/ai_gen_lion.jpeg" --num-samples 10
 ```
 
-You can further customize the process by tuning the parameters of the script. Here is the full list of parameters that you can tune:
+or you can use the Command Line Interface (CLI) to interact with the script:
+    
+```bash
+diff-edit --remove-prompt "lion" --add-prompt "dog" --image-link "https://github.com/Gennaro-Farina/DiffEdit/blob/main/static/ai_gen_lion.jpeg" --num-samples 10
+```
 
+The script has the following options:
 ```bash
 python image_edit.py --help
 usage: image_edit.py [-h] [--remove-prompt REMOVE_PROMPT] [--add-prompt ADD_PROMPT] [--image IMAGE] [--image-link IMAGE_LINK] [--device {cpu,cuda,mps}]
