@@ -17,13 +17,6 @@ To get a clearer overview of the process, you can take a look at the <a href="ht
 
 The wheel for this repo is avaivalable here: ![https://pypi.org/project/DiffEdit/](https://pypi.org/project/DiffEdit/)
 
-
-Index:
-- results: https://github.com/Gennaro-Farina/DiffEdit/edit/main/README.md#results
-- installation: https://github.com/Gennaro-Farina/DiffEdit/edit/main/README.md#installation
-- usage: https://github.com/Gennaro-Farina/DiffEdit/edit/main/README.md#usage
-
-
 ## Results
 
 <table>
