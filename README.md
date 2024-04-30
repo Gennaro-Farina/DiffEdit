@@ -1,5 +1,3 @@
-# DiffEdit
-
 <div>
          <p align="right">
                   <img src="https://github.com/Gennaro-Farina/DiffEdit/actions/workflows/build-and-test.yml/badge.svg" alt="badge for the build and test phases" />
@@ -9,6 +7,8 @@
                   </a>
          </p>
 </div>
+
+# DiffEdit
 
 
 An unofficial implementation of <a href="https://arxiv.org/abs/2210.11427"> DiffEdit</a> based on <a href="https://huggingface.co"> 🤗 Hugging Face </a>, <a href="https://github.com/johnrobinsn/diffusion_experiments/blob/main/DiffEdit.ipynb"> this repo</a> and PyTorch.
